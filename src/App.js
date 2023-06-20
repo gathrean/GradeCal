@@ -5,6 +5,7 @@ import CoursesPage from './pages/CoursesPage';
 import ProfilePage from './pages/ProfilePage';
 import SettingsPage from './pages/SettingsPage';
 import './App.css';
+import { Helmet } from 'react-helmet';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -16,6 +17,9 @@ function App() {
   return (
     <Router>
       <div className={`App ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+        <Helmet>
+          <title>Grade Sage</title> {/* Set the default title */}
+        </Helmet>
         <Navbar closeSidebar={closeSidebar} />
         <div className="content">
           <Routes>
