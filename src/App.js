@@ -1,15 +1,26 @@
+// Main app components
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
+// Components
 import Navbar from './Navbar';
+
+// Pages
 import CoursesPage from './pages/CoursesPage';
 import ProfilePage from './pages/ProfilePage';
 import SettingsPage from './pages/SettingsPage';
-import './App.css';
-import { Helmet } from 'react-helmet';
+
+// Styles
+import './styles/App.css';
+import './styles/Navbar.css';
+
 
 function App() {
+  // State for whether the sidebar is open or not
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  // Function to close the sidebar
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };

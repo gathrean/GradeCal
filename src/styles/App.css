@@ -1,0 +1,30 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+  font-family: mabry, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('Gotham Medium Regular.ttf') format('truetype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #00171F;
+  font-family: 'Gotham Medium', Arial, sans-serif;
+}
+
+.content {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

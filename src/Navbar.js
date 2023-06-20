@@ -42,7 +42,7 @@ function Navbar() {
                             }}
                             className={activePage === '/courses' ? 'active' : ''}
                         >
-                            COURSES
+                            Courses
                         </Link>
                     </li>
                     <li>
@@ -54,7 +54,7 @@ function Navbar() {
                             }}
                             className={activePage === '/profile' ? 'active' : ''}
                         >
-                            PROFILE
+                            Profile
                         </Link>
                     </li>
                     <li>
@@ -66,7 +66,7 @@ function Navbar() {
                             }}
                             className={activePage === '/settings' ? 'active' : ''}
                         >
-                            SETTINGS
+                            Settings
                         </Link>
                     </li>
                 </ul>
