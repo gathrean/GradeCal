@@ -5,7 +5,7 @@ function CoursesPage() {
   return (
     <div>
       <Helmet>
-        <title>Courses | Grade Sage</title>
+        <title>Courses | GradeSage</title>
       </Helmet>
 
       <h1>Courses</h1>
