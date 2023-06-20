@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logoImage from './images/elephant.png';
 
 function Navbar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [activePage, setActivePage] = useState('');
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
-    const closeSidebar = (toggleSidebar) => {
+    const closeSidebar = () => {
         if (window.innerWidth <= 768) {
             toggleSidebar();
         }
     };
+
+    const location = useLocation();
+
+    // Set the active page based on the current location
+    React.useEffect(() => {
+        setActivePage(location.pathname);
+    }, [location]);
 
     return (
         <>
@@ -26,21 +34,41 @@ function Navbar() {
                 <br></br>
                 <ul>
                     <li>
-                        <Link to="/courses" onClick={() => closeSidebar(toggleSidebar)}>
+                        <Link
+                            to="/courses"
+                            onClick={() => {
+                                closeSidebar();
+                                setActivePage('/courses');
+                            }}
+                            className={activePage === '/courses' ? 'active' : ''}
+                        >
                             COURSES
                         </Link>
                     </li>
                     <li>
-                        <Link to="/profile" onClick={() => closeSidebar(toggleSidebar)}>
+                        <Link
+                            to="/profile"
+                            onClick={() => {
+                                closeSidebar();
+                                setActivePage('/profile');
+                            }}
+                            className={activePage === '/profile' ? 'active' : ''}
+                        >
                             PROFILE
                         </Link>
                     </li>
                     <li>
-                        <Link to="/settings" onClick={() => closeSidebar(toggleSidebar)}>
+                        <Link
+                            to="/settings"
+                            onClick={() => {
+                                closeSidebar();
+                                setActivePage('/settings');
+                            }}
+                            className={activePage === '/settings' ? 'active' : ''}
+                        >
                             SETTINGS
                         </Link>
                     </li>
-
                 </ul>
             </nav>
             <div className={`hamburger ${isSidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}>
