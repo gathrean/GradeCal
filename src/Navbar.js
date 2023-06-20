@@ -70,6 +70,12 @@ function Navbar() {
                         </Link>
                     </li>
                 </ul>
+                <br></br>
+                <div className="navbarCredits">
+                    App by Gathrean Dela Cruz
+                    <br></br>
+                    Version 0.1.0
+                </div>
             </nav>
             <div className={`hamburger ${isSidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}>
                 <span></span>
