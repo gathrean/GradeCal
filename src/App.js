@@ -1,27 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
-import Navbar from './Navbar';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-// Import your page components
+import Navbar from './Navbar';
 import CoursesPage from './pages/CoursesPage';
 import ProfilePage from './pages/ProfilePage';
 import SettingsPage from './pages/SettingsPage';
+import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <Navbar />
-
+        <Navbar />
+        <div className="content">
           <Routes>
             <Route path="/courses" element={<CoursesPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/settings" element={<SettingsPage />} />
           </Routes>
-        </header>
+        </div>
       </div>
     </Router>
   );
