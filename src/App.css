@@ -20,6 +20,17 @@
 
 .sidebar.open {
   left: 0;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100vh;
+  transition: left 0.3s ease;
+  z-index: 1;
+  /* Increase the z-index value */
+}
+
+.sidebar.open {
+  left: 0;
 }
 
 .sidebar ul {
@@ -50,23 +61,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.hamburger {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1;
-  cursor: pointer;
-  display: none;
-}
-
-.hamburger span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: #333;
-  margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
