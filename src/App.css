@@ -9,24 +9,11 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  position: fixed;
   top: 0;
   left: -250px;
   height: 100vh;
   transition: left 0.3s ease;
   z-index: 1;
-  /* Increase the z-index value */
-}
-
-.sidebar.open {
-  left: 0;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  height: 100vh;
-  transition: left 0.3s ease;
-  z-index: 1;
-  /* Increase the z-index value */
 }
 
 .sidebar.open {
@@ -63,13 +50,41 @@
   align-items: center;
 }
 
+.hamburger {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  cursor: pointer;
+  display: none;
+  transition: left 0.3s ease;
+}
+
+.hamburger.open {
+  left: 260px;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 5px;
+}
+
 @media (max-width: 768px) {
+
+  /* Adjust the maximum width */
   .App {
     flex-direction: column;
   }
 
   .content {
     margin-left: 0;
+  }
+
+  .sidebar {
+    position: fixed;
   }
 
   .sidebar.open {
