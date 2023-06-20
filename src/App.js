@@ -18,7 +18,7 @@ function App() {
     <Router>
       <div className={`App ${isSidebarOpen ? 'sidebar-open' : ''}`}>
         <Helmet>
-          <title>Grade Sage</title> {/* Set the default title */}
+          <title>GradeSage</title> {/* Set the default title */}
         </Helmet>
         <Navbar closeSidebar={closeSidebar} />
         <div className="content">

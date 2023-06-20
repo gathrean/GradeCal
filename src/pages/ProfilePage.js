@@ -5,7 +5,7 @@ function ProfilePage() {
   return (
     <div>
       <Helmet>
-        <title>Profile | Grade Sage</title>
+        <title>Profile | GradeSage</title>
       </Helmet>
 
       <h1>Profile</h1>

@@ -5,7 +5,7 @@ function SettingsPage() {
   return (
     <div>
       <Helmet>
-        <title>Settings | Grade Sage</title>
+        <title>Settings | GradeSage</title>
       </Helmet>
 
       <h1>Settings</h1>
