@@ -1,13 +1,31 @@
 .App {
   display: flex;
   min-height: 100vh;
+  font-family: mabry, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('../public/fonts/Gotham Medium Regular.ttf') format('truetype');
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #00171F;
+  font-family: 'Gotham Medium', Arial, sans-serif;
 }
 
 .sidebar {
   width: 250px;
   height: 100vh;
-  background-color: #333;
+  background-color: #539987;
   color: #fff;
+  font-family: 'Gotham Medium', Arial, sans-serif;
   display: flex;
   flex-direction: column;
   top: 0;
@@ -29,6 +47,7 @@
 
 .sidebar li {
   padding: 10px;
+  font-size: larger;
 }
 
 .sidebar li a {

@@ -13,13 +13,13 @@ function Navbar() {
             <nav className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
                 <ul>
                     <li>
-                        <Link to="/courses">Courses</Link>
+                        <Link to="/courses">COURSES</Link>
                     </li>
                     <li>
-                        <Link to="/profile">Profile</Link>
+                        <Link to="/profile">PROFILE</Link>
                     </li>
                     <li>
-                        <Link to="/settings">Settings</Link>
+                        <Link to="/settings">SETTINGS</Link>
                     </li>
                 </ul>
             </nav>
