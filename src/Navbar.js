@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logoImage from './images/elephant.png';
 
 function Navbar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -7,10 +8,16 @@ function Navbar() {
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
-    
+
     return (
         <>
             <nav className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+                <div className="logo">
+                    <img className="logoImage" src={logoImage} alt="Logo" />
+                    Grade<br></br>
+                    Sage
+                </div>
+                <br></br>
                 <ul>
                     <li>
                         <Link to="/courses">COURSES</Link>
@@ -28,7 +35,6 @@ function Navbar() {
                 <span></span>
                 <span></span>
             </div>
-
         </>
     );
 }
