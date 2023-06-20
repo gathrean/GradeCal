@@ -9,10 +9,14 @@ import './App.css';
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
     <Router>
       <div className={`App ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-        <Navbar isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
+        <Navbar closeSidebar={closeSidebar} />
         <div className="content">
           <Routes>
             <Route path="/courses" element={<CoursesPage />} />
@@ -20,7 +24,7 @@ function App() {
             <Route path="/settings" element={<SettingsPage />} />
           </Routes>
         </div>
-        <div className={`overlay ${isSidebarOpen ? 'open' : ''}`} onClick={() => setIsSidebarOpen(false)}></div>
+        <div className={`overlay ${isSidebarOpen ? 'open' : ''}`} onClick={closeSidebar}></div>
       </div>
     </Router>
   );

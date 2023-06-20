@@ -9,6 +9,12 @@ function Navbar() {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
+    const closeSidebar = (toggleSidebar) => {
+        if (window.innerWidth <= 768) {
+            toggleSidebar();
+        }
+    };
+
     return (
         <>
             <nav className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
@@ -20,14 +26,21 @@ function Navbar() {
                 <br></br>
                 <ul>
                     <li>
-                        <Link to="/courses">COURSES</Link>
+                        <Link to="/courses" onClick={() => closeSidebar(toggleSidebar)}>
+                            COURSES
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/profile">PROFILE</Link>
+                        <Link to="/profile" onClick={() => closeSidebar(toggleSidebar)}>
+                            PROFILE
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/settings">SETTINGS</Link>
+                        <Link to="/settings" onClick={() => closeSidebar(toggleSidebar)}>
+                            SETTINGS
+                        </Link>
                     </li>
+
                 </ul>
             </nav>
             <div className={`hamburger ${isSidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}>
