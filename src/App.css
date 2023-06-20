@@ -1,38 +1,162 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
   min-height: 100vh;
+  font-family: mabry, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('../public/fonts/Gotham Medium Regular.ttf') format('truetype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #00171F;
+  font-family: 'Gotham Medium', Arial, sans-serif;
+}
+
+.logo {
+  font-family: 'Gotham Medium', Arial, sans-serif;
+  text-align: end;
+
+  display: flex;
+  flex-direction: row;
+
+  /* center the text */
+  margin: auto;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.logoImage {
+  height: 60px;
+  padding: 0px 5px 0px 0px;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #00171F;
+  color: #fff;
+  font-family: 'Gotham Medium', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: -250px;
+  transition: left 0.3s ease;
+  z-index: 3;
+  /* Increase the z-index value */
+}
+
+.hamburger {
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  transition: left 0.3s ease;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.sidebar li {
+  padding: 10px;
+  font-size: larger;
+}
+
+.sidebar li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar li a:hover {
+  text-decoration: underline;
+}
+
+.sidebar li a.active {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 20px;
+  position: relative;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App.sidebar-open .overlay {
+  display: block;
+  /* Show the overlay when the sidebar is open */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App.sidebar-open {
+  filter: brightness(50%);
+  transition: filter 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .content {
+    margin-left: 0;
+    position: relative;
   }
+
+  .sidebar {
+    position: fixed;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .hamburger.open {
+    left: 260px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #00171F;
+    margin-bottom: 5px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    display: none;
+  }
+
+  .sidebar.open~.overlay {
+    display: block;
+  }
+
 }
