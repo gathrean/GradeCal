@@ -23,14 +23,14 @@ h6 {
 .sidebar {
   width: 250px;
   height: 100vh;
-  background-color: #539987;
+  background-color: #00171F;
   color: #fff;
   font-family: 'Gotham Medium', Arial, sans-serif;
   display: flex;
   flex-direction: column;
   top: 0;
   left: -250px;
-  transition: left 0.3s ease;
+  transition: left 0.1s ease;
   z-index: 1;
 }
 
@@ -91,7 +91,7 @@ h6 {
     position: fixed;
     top: 10px;
     left: 10px;
-    transition: left 0.3s ease;
+    transition: left 0.1s ease;
     z-index: 1;
     cursor: pointer;
   }
@@ -104,7 +104,7 @@ h6 {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #333;
+    background-color: #00171F;
     margin-bottom: 5px;
   }
 
