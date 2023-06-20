@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Gotham Medium';
-  src: url('../public/fonts/Gotham Medium Regular.ttf') format('truetype');
+  src: url('Gotham Medium Regular.ttf') format('truetype');
 }
 
 h1,

@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import CoursesPage from './pages/CoursesPage';
 import ProfilePage from './pages/ProfilePage';
 import SettingsPage from './pages/SettingsPage';
-import './App.css';
+import './styles/App.css';
 import { Helmet } from 'react-helmet';
 
 function App() {
