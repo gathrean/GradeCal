@@ -5,13 +5,13 @@
 
 .sidebar {
   width: 250px;
+  height: 100vh;
   background-color: #333;
   color: #fff;
   display: flex;
   flex-direction: column;
   top: 0;
   left: -250px;
-  height: 100vh;
   transition: left 0.3s ease;
   z-index: 1;
 }
@@ -50,31 +50,7 @@
   align-items: center;
 }
 
-.hamburger {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 2;
-  cursor: pointer;
-  display: none;
-  transition: left 0.3s ease;
-}
-
-.hamburger.open {
-  left: 260px;
-}
-
-.hamburger span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: #333;
-  margin-bottom: 5px;
-}
-
 @media (max-width: 768px) {
-
-  /* Adjust the maximum width */
   .App {
     flex-direction: column;
   }
@@ -93,5 +69,24 @@
 
   .hamburger {
     display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    transition: left 0.3s ease;
+    z-index: 1;
+    cursor: pointer;
   }
+
+  .hamburger.open {
+    left: 260px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 5px;
+  }
+
 }

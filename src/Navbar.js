@@ -7,7 +7,7 @@ function Navbar() {
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
-
+    
     return (
         <>
             <nav className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
@@ -23,11 +23,12 @@ function Navbar() {
                     </li>
                 </ul>
             </nav>
-            <div className="hamburger" onClick={toggleSidebar}>
+            <div className={`hamburger ${isSidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+
         </>
     );
 }
